@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <!-- hero -->
+    <section id="title" class="gradient py-10 mb-10">
+
+        <div class="container col-xxl-8 px-4 pt-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="../images/farmer fert.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="1400" width="1400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">fertilizer recommendation</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus facilis provident veniam, quidem fugiat aspernatur?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+     <!-- form -->
+     <div class="row g-3"></div>
+<section>
+  <div style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  ">
+    <form method="POST" action="{{ url_for('fert_recommend') }}">
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+        <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value (example:50)" style="font-weight: bold" required="">
+      </div>
+      
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="Phosphorous" style="font-size: 17px"><b>Phosphorous</b></label>
+        <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value (example:50)" style="font-weight: bold" required="">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+        <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value (example:50)" style="font-weight: bold" required="">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="ph" style="font-size: 17px"><b>pH level</b></label>
+        <input
+          type="text"
+          class="form-control"
+          id="ph"
+          name="ph"
+          placeholder="Enter the value"
+          style="font-weight: bold"
+          required
+        />
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="crop" style="font-size: 17px"><b>Crop you want to grow</b></label>
+        <select name="cropname" class="form-control" id="crop" placeholder="Select a crop" style="font-weight: bold" required="">
+            <option>pigeonpeas</option><option>maize</option>
+            <option>chickpea</option>
+            <option>kidneybeans</option>
+            <option>mothbeans</option>
+            <option>mungbean</option>
+            <option>blackgram</option>
+            <option>lentil</option>
+            <option>rice</option><option>pomegranate</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option selected="">Select crop</option><option>grapes</option>
+            <option>watermelon</option>
+            <option>muskmelon</option>
+            <option>apple</option>
+            <option>orange</option>
+            <option>papaya</option>
+            <option>coconut</option>
+            <option>cotton</option>
+            <option>jute</option>
+            <option>coffee</option>
+        </select>
+      </div>
+       
+      
+      <div class="d-flex justify-content-center">
+        <a href="{{ url_for('fertilizer-result') }}" style="text-decoration: none;">
+            <button type="submit" class="btn btn-info" style="
+          color: black;
+          font-weight: bold;
+          width: 130px;
+          height: 50px;
+          border-radius: 12px;
+          margin-bottom: 30px;
+          font-size: 21px;
+        ">
+          Predict
+        </button>
+          </a>
+      </div>
+    
+    </form>
+  </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
